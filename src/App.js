@@ -1,21 +1,14 @@
 import './App.css';
-import {CartWidget, NavBar, Search} from './components/Header/Header'
-import logo from './img/tresdelseis.png'
-import {ItemListContainer} from './components/HomeView/HomeView'
+import { Header } from './components/Header/Header';
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header class="header">
-        <nav class="container__navBar">
-          <NavBar/>
-        </nav>
-        <img id="logo" src={logo}/>
-        <div class="container__widgets">
-          <Search/>
-          <CartWidget/>
-          
-        </div>
+    <div>
+      <header>
+        <Header/>
       </header>
       <section>
         <ItemListContainer/>

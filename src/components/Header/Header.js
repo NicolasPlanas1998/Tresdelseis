@@ -1,30 +1,21 @@
-import React from "react";
+import React from "react"
+import { NavBar } from "./NavBar";
+import { Search } from "./Search";
+import { CartWidget } from "./CartWidget";
+import logo from '../../img/tresdelseis.png'
+import './header.css';
 
-export const NavBar = () =>{
-    return(
-        <ul class="navBar">
-            <li class="navBar__li">INICIO</li>
-            <li class="navBar__li"><a>PRODUCTOS</a>
-                <ul class="navBar__subBar">
-                    <li>VESTIDOS</li>
-                    <li>PANTALONES</li>
-                </ul>
-            </li>
-            <li class="navBar__li">NUEVO</li>
-            <li class="navBar__li">SALE</li>
-            <li class="navBar__li">CONTACTO</li>
-        </ul>
-    )
-}
-export const CartWidget = () =>{
-    return <i class="fas fa-shopping-cart" id="cart"></i>
-}
-export const Search = () =>{
+export const Header = () =>{
     return (
-    <div class="container__searcher">
-        <i class="fas fa-search">  
-            <input type="search" placeHolder="Buscar" id="search"></input>
-        </i>
-    </div>
+        <div className="header">
+            <nav className="container__navBar">
+                <NavBar/>
+            </nav>
+            <img alt="Logo de la empresa" id="logo" src={logo}/>
+            <div className="container__widgets">
+                <Search/>
+                <CartWidget/> 
+            </div>
+        </div>
     )
 }

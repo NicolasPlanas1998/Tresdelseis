@@ -1,0 +1,45 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: antiquewhite;
+}
+#logo{
+    width: 250px;
+    height: 65px;
+    padding: 2px;    
+}
+.container__navBar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navBar{
+        display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    list-style: none;
+}
+.navBar__li{
+        margin: 5px   
+    }
+.navBar__subBar{
+        display: none;
+    }
+.navBar__subBar:hover{
+        display: block
+    }
+.container__widgets{
+        width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center
+}
+#search{
+        margin: 0 40px 0 8px;
+    border-radius: 8px;
+    padding: 3px
+}
+#cart{
+        margin-right: 2vw}
