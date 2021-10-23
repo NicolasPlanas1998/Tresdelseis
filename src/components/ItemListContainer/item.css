@@ -1,0 +1,12 @@
+.cardImg{
+    padding: 5px;
+    border-radius: 1px;
+}
+h2{
+    text-align: center;
+    color: rgb(0, 61, 31);
+}
+.row{
+    display: flex;
+    justify-content: center;
+}

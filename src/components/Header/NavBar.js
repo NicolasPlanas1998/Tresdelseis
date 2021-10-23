@@ -1,18 +1,24 @@
 import React from "react";
+import {
+    Link,
+    NavLink
+} from "react-router-dom";
 
 export const NavBar = () =>{
+
+
     return(
         <ul className="navBar">
-            <li className="navBar__li">INICIO</li>
-            <li className="navBar__li">PRODUCTOS
-                <ul className="navBar__subBar">
-                    <li>VESTIDOS</li>
-                    <li>PANTALONES</li>
-                </ul>
-            </li>
-            <li className="navBar__li">NUEVO</li>
-            <li className="navBar__li">SALE</li>
-            <li className="navBar__li">CONTACTO</li>
+            <Link className="navBar__li" to='/'>INICO</Link>
+            <NavLink className="navBar__li deploy" activeClassName={'activeLink'} to='/productos'>PRODUCTOS
+                    <ul className="navBar__subBar ">
+                        <Link className="options" to='/productos/camisa'>Camisa</Link>
+                        <Link className="options" to='/productos/chaqueta'>Chaquetas</Link>
+                        <Link className="options" to='/productos/vestido'>Vestidos</Link>
+                    </ul>
+            </NavLink>
+            <NavLink className="navBar__li" activeClassName={'activeLink'} to='/nuevo'>NUEVO</NavLink>
+            <NavLink className="navBar__li" activeClassName={'activeLink'} to='/contacto'>CONTACTO</NavLink>
         </ul>
     )
 }

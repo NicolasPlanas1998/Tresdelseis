@@ -2,44 +2,87 @@
     display: flex;
     justify-content: space-between;
     padding: 5px;
-    background-color: antiquewhite;
+    width: 100%;
+    background: rgb(0,150,199);
+    background: linear-gradient(0deg, rgba(0,150,199,0) 0%, rgba(5,89,35,1) 99%, rgba(5,85,23,1) 100%);
+    position: relative;
 }
+
 #logo{
     width: 250px;
     height: 65px;
     padding: 2px;    
 }
+
+/* ----navBar in Header---- */
 .container__navBar{
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+/* ----navBar in NavBar---- */
 .navBar{
-        display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    list-style: none;
+    display: block;
+}
+.navBar > .navBar__li{
+    float: left;
+    margin-top: 10px;
+    color: rgb(219, 219, 219);
+    font-weight: 400;
 }
 .navBar__li{
-        margin: 5px   
-    }
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    text-decoration: none;
+}
+.navBar__li:hover{
+    color: beige;
+    font-weight: bold;
+}
 .navBar__subBar{
-        display: none;
-    }
-.navBar__subBar:hover{
-        display: block
-    }
+    display: none;
+    padding: 0;
+    list-style: none;
+}
+.deploy:hover > .navBar__subBar{
+    display: block;
+}
+.options{
+    display: block;
+    text-decoration: none;
+    color: rgb(250, 255, 250);
+}
+.options:hover{
+    color: rgb(255, 255, 205);
+}
+.activeLink{
+    font-weight: bolder;
+    color: red;
+}
+/* ----Widget in header---- */
 .container__widgets{
         width: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center
 }
+/* ----Widget ( Searcher, cartWidget)---- */
 #search{
         margin: 0 40px 0 8px;
     border-radius: 8px;
-    padding: 3px
+    padding: 2px;
+    border: 1px solid rgb(236, 236, 236);
+    background-color: transparent;
+
+}
+.fa-search{
+    color: white;
 }
 #cart{
-        margin-right: 2vw}
+        margin-right: 2vw;
+        color: white;
+    }
+        
