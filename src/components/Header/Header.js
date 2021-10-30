@@ -5,6 +5,7 @@ import { CartWidget } from "./CartWidget";
 import logo from '../../imagenes/tresdelseis.png'
 import './header.css';
 import {Link} from "react-router-dom";
+import { HomeView } from "../HomeView/HomeView";
 
 export const Header = () =>{
     return (

@@ -2,9 +2,8 @@
     display: flex;
     justify-content: space-between;
     padding: 5px;
+    padding-right: 0;
     width: 100%;
-    background: rgb(0,150,199);
-    background: linear-gradient(0deg, rgba(0,150,199,0) 0%, rgba(5,89,35,1) 99%, rgba(5,85,23,1) 100%);
     position: relative;
 }
 
@@ -22,25 +21,28 @@
     justify-content: center;
 }
 /* ----navBar in NavBar---- */
-.navBar{
-    display: block;
+.navBar:hover{
+    font-size: small;
 }
+
 .navBar > .navBar__li{
     float: left;
     margin-top: 10px;
-    color: rgb(219, 219, 219);
-    font-weight: 400;
+    color: rgb(88, 83, 6);
+    font-size: large;
+    font-weight: 350;
 }
 .navBar__li{
     display: block;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding-right: 9px;
     text-decoration: none;
 }
 .navBar__li:hover{
-    color: beige;
-    font-weight: bold;
+    color: rgb(88, 83, 6);
+    font-weight: 500;
+
 }
 .navBar__subBar{
     display: none;
@@ -48,15 +50,21 @@
     list-style: none;
 }
 .deploy:hover > .navBar__subBar{
+    background-color:rgba(88, 83, 6, 0.555);
+    border-radius: 0 0 15px 15px ;
     display: block;
+    position: absolute;
+    padding: 3px;
 }
 .options{
     display: block;
     text-decoration: none;
-    color: rgb(250, 255, 250);
+    color: rgb(255, 249, 249);
 }
 .options:hover{
-    color: rgb(255, 255, 205);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+
 }
 .activeLink{
     font-weight: bolder;
@@ -64,25 +72,59 @@
 }
 /* ----Widget in header---- */
 .container__widgets{
-        width: 100%;
+    width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    align-items: center
+    align-items: flex-end;
+    margin-right: 0;
+    
 }
 /* ----Widget ( Searcher, cartWidget)---- */
-#search{
-        margin: 0 40px 0 8px;
+.container__searcher{
+    display: block;
+    background-color:rgba(41, 38, 4, 0.788) ;
+    padding: 4px;
+    border-radius:  10px 0 0 10px;
+}
+.search{
+    display: none;
+    margin: 0 10px 0 8px;
     border-radius: 8px;
     padding: 2px;
     border: 1px solid rgb(236, 236, 236);
     background-color: transparent;
-
-}
-.fa-search{
     color: white;
 }
+.search:focus{
+    border: none;
+}
+.search::placeholder{
+    color: rgb(177, 182, 177);
+}
+.fa-search{
+    color: wheat;
+}
+
+.fa-search:hover > .search{
+    display: inline-block;
+}
+.cart__link{
+    text-decoration: none;
+    color: wheat;
+}
+.container__cart{
+    margin-top: 3px;
+    display: block;
+    background-color:rgba(41, 38, 4, 0.788) ;
+    padding: 4px;
+    border-radius:  10px 0 0 10px;
+}
+
 #cart{
-        margin-right: 2vw;
-        color: white;
+        
+    margin-right: 4px;
+    color:wheat;
+
     }
         
