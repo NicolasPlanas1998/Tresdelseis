@@ -16,7 +16,6 @@ export const NavBar = () =>{
                         <NavLink className="options" to='/productos/vestido'>Vestidos</NavLink>
                     </ul>
             </NavLink>
-            <NavLink className="navBar__li" activeClassName={'activeLink'} to='/nuevo'>NUEVO</NavLink>
             <NavLink className="navBar__li" activeClassName={'activeLink'} to='/contacto'>CONTACTO</NavLink>
         </ul>
     )

@@ -13,6 +13,8 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import {CartScreen} from './components/CartScreen/CartScreen'
 import { CartProvider} from './context/CartContext'
 import {UIProvider } from './context/UIContext';
+import { Checkout } from './components/Checkout/Checkout';
+import { UserManager } from './components/UserManager/UserManager';
 
 
 function App() {
@@ -25,28 +27,33 @@ function App() {
           <Router>
           <div className="contenedor"> 
             <Header/>   
-              <Switch>
-                <Route exact path="/">
-                <HomeView/>
-                </Route>
-                <Route path="/productos/:categoryId">
-                  <ItemListContainer/>
-                </Route>
-                <Route path="/:categoryId/:productId">
-                  <ItemDetailContainer/>
-                </Route>           
-                <Route exact path="/nuevo">
-                  <h2>Nuevo</h2>
-                  <h3>Estamos trabajando en esta seccion...</h3>
-                </Route>
-                <Route exact path="/contacto">
-                  <Form/>
-                </Route>
-                <Route path="/cart">
-                  <CartScreen/>
-                </Route> 
-              </Switch>
-              </div>
+            <Switch>
+              <Route exact path="/">
+              <HomeView/>
+              </Route>
+              <Route exact path="/productos">
+                <ItemListContainer/>
+              </Route>
+              <Route path="/productos/:categoryId">
+                <ItemListContainer/>
+              </Route>
+              <Route path="/:categoryId/:productId">
+                <ItemDetailContainer/>
+              </Route>
+              <Route path="/checkout">
+                <Checkout/>
+              </Route>             
+              <Route exact path="/contacto">
+                <Form/>
+              </Route>
+              <Route path="/cart">
+                <CartScreen/>
+              </Route> 
+              <Route path="/login">
+                <UserManager/>
+              </Route> 
+            </Switch>
+          </div>
           </Router>
         </CartProvider>
       </UIProvider>

@@ -1,6 +1,10 @@
-.form{
-    display: grid;
+.form-contact{
+    display: block;
+    flex-direction: row;
 }
-.form-control{
-    border-radius: 50px;
+.form-check{
+    margin-top: 10px;
+}
+.btn-contact{
+    margin-top: 10px;
 }

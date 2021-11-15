@@ -23,8 +23,8 @@
 /* ----navBar in NavBar---- */
 .navBar:hover{
     font-size: small;
+    
 }
-
 .navBar > .navBar__li{
     float: left;
     margin-top: 10px;
@@ -70,6 +70,35 @@
     font-weight: bolder;
     color: red;
 }
+.hamburger{
+    font-size: xx-large;
+    display: none;
+    background-color:rgba(41, 38, 4, 0.788) ;
+    border-radius: 6px;
+    color: wheat;
+    padding: 8px;
+}
+@media(max-width:768px){
+    .container__navBar{
+        justify-content: start;
+    }
+    .navBar{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .container__navBar:hover > .navBar{
+        display: block;
+        float: none;
+    }
+    .container__navBar:hover > .hamburger{
+        display: none;
+    }
+    .deploy:hover > .navBar__subBar{
+        position: relative;
+    }
+}
 /* ----Widget in header---- */
 .container__widgets{
     width: 100%;
@@ -81,16 +110,11 @@
     
 }
 /* ----Widget ( Searcher, cartWidget)---- */
-.container__searcher{
-    display: block;
-    background-color:rgba(41, 38, 4, 0.788) ;
-    padding: 4px;
-    border-radius:  10px 0 0 10px;
-}
 .search{
     display: none;
-    margin: 0 10px 0 8px;
+    margin: 0 1px 0 4px;
     border-radius: 8px;
+    width: 80%;
     padding: 2px;
     border: 1px solid rgb(236, 236, 236);
     background-color: transparent;
@@ -102,29 +126,35 @@
 .search::placeholder{
     color: rgb(177, 182, 177);
 }
-.fa-search{
-    color: wheat;
-}
 
 .fa-search:hover > .search{
     display: inline-block;
 }
-.cart__link{
+.widget__link{
     text-decoration: none;
     color: wheat;
 }
-.container__cart{
+.widget__link:hover{
+    color: rgb(175, 140, 76);
+    
+}
+.widget{
     margin-top: 3px;
+    margin-bottom: 3px;
     display: block;
     background-color:rgba(41, 38, 4, 0.788) ;
     padding: 4px;
+    min-width: 50px;
     border-radius:  10px 0 0 10px;
 }
-
-#cart{
-        
+.icon{
+    font-size: large;
     margin-right: 4px;
     color:wheat;
-
-    }
+    padding: 2px;
+    transition: 0.35s;
+}
+.icon:hover{
+    color:rgb(175, 140, 76);
+}
         

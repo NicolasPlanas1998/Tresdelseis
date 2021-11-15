@@ -1,0 +1,11 @@
+.form-group--radio{
+    padding: 5px;
+}
+.form-group--radio >p {
+    margin: 0;
+    padding: 0;
+}
+.radio{
+    margin-right: 5px;
+    margin-left: 10px;
+}

@@ -6,14 +6,14 @@ export const CartScreen = () => {
 
     const {carrito, vaciarCarrito, removeItem, calcularTotal} = useContext(CartContext)
 
-
+    // Vista de los producctos seleccionados
     return (
         <div className="container target">
             {
                 carrito.length === 0 
                 ? <>
                     <h2 className="h2_cart">No hay productos agregados</h2>
-                    <Link to="/" className="btn btn-success">Ir a comprar</Link>                 
+                    <Link to="/productos" className="btn btn-success">Ir a comprar</Link>                 
                 </>
                 : 
                     <>
@@ -36,7 +36,9 @@ export const CartScreen = () => {
                         <h3>Precio total: ${calcularTotal()}</h3>
                         <div className="info__cart">
                             <button className="btn btn-secondary" onClick={vaciarCarrito}> Vaciar carrito</button>
-                            <button className="btn btn-success"> Pagar</button>
+                            <Link to="checkout">    
+                                <button className="btn btn-success"> Pagar</button>
+                            </Link>
                         </div>
                     </>
             } 

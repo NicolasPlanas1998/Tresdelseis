@@ -51,7 +51,7 @@
 .btn-detail{
     border-radius: 10px;
     border: 1px solid black;
-    background-color: rgba(8, 26, 4, 0.623);
+    background-color: rgba(8, 26, 4, 0.774);
     padding: 3px;
     margin-top: 20px;
 }
@@ -69,7 +69,7 @@
 .color{
     width: 30px;
     height: 30px;
-
+    margin: 5px;
 }
 .count_num{
     padding: 10px;
@@ -90,6 +90,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.btn-cont{
+    margin-bottom: 10px;
 }
 .btn-warning{
     margin-top: 4px;

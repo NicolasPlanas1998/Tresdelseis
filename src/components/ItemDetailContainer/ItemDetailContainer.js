@@ -10,26 +10,17 @@ import { getFirestore } from "../../firebase/config";
 
 export const ItemDetailContainer = () => {
 
-    const {loading, setLoading} = useContext(UIContext)
-    const [detailItem, setItem] = useState([])
-    const {productId} = useParams()
-    const {categoryId} = useParams()
+    const [item, setItem] = useState(null)
     
+    const {loading, setLoading} = useContext(UIContext)
 
+    const {productId} = useParams()
 
-    // const request = () =>{
-    //     return new Promise((res,rej) =>{
-    //         setTimeout(()=>
-    //             res(stock)
-    //         ,1000)
-    //     })
-    // }   
     useEffect(()=>{
         setLoading(true)
 
         const db = getFirestore()
         const productos = db.collection('productos')
-
         const item = productos.doc(productId)
 
         item.get()
@@ -39,31 +30,20 @@ export const ItemDetailContainer = () => {
                     ...doc.data()
                 })
             })
-            .catch((err) => console.log(err))   
-            .finally(()=>setLoading(false))         
-            
+            .catch( err => console.log(err))
+            .finally(() => {
+                setLoading(false)
+            })
 
-        // request()     
-        //     .then((res) => {
-        //         if(productId){
-        //             setItem(res.filter(detail => detail.id === productId && detail.product === categoryId) )
-        //         }
-        //     })
-        //     .catch((err) => console.log(err))
-        //     .finally(()=>setLoading(false))
+    }, [productId, setLoading])
 
-    },[productId])
-
-    return(
+    return (
         <div>
-            {loading 
-            ?
-            <h2 className="loading"></h2>
-            : 
-            <div>
-                {detailItem.map((item)=><ItemDetail {...item} key={item.id}/>)}
-            </div>}
+            {
+                loading 
+                ? <div className="loading"></div>
+                : <ItemDetail {...item}/>
+            }
         </div>
     )
 }
-

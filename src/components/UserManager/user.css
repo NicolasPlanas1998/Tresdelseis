@@ -1,0 +1,48 @@
+.center{
+    text-align: center;
+    text-decoration: underline;
+    padding: 10px;
+}
+.inputs__gen{
+    display: grid;    
+}
+.inputs__gen > label{
+    color: wheat;
+}
+.inputs__gen > input{
+    background-color: rgba(14, 54, 4, 0.404) ;
+    border-radius: 8px 8px 0 0;
+    color: rgba(15, 39, 1, 0.979);
+    font-weight: 500;
+}
+.inputs__gen > input:focus{
+    background-color: rgba(14, 54, 4, 0.801) ;
+    color: white;
+
+}
+
+.container__btn{
+    background-color: rgba(14, 54, 4, 0.493);
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.btn-addProduct{
+    background-color: rgba(10, 70, 10, 0.699);
+    color: wheat;
+    border-radius: 6px;
+    padding: 5px;
+}
+.btn-addProduct:hover{
+    background-color: rgba(10, 70, 10, 0.795);
+    font-weight: 500;
+}
+.color{
+	border: none;
+	width: 32px;
+	height: 32px;
+}
